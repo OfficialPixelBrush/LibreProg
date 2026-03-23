@@ -2,13 +2,13 @@
 A fully free and open-source set of assets for Minecraft Beta 1.7.3
 
 ## Purpose
-The purpose of LibreProg is to provide a full set of free and open source assets for anyone to use in their old-school Minecraft projects. In the case of LibreProg, it targets Beta 1.7.3
+The purpose of **LibreProg** is to provide a full set of free and open source assets for anyone to use in their old-school Minecraft projects. In the case of **LibreProg**, it targets Beta 1.7.3.
 
 ## How free are the assets?
 The textures were created while loosely referencing the original textures, mainly for layout purposes. All colors were eyeballed or done from memory.
 
 ## How are assets made?
-The app McPerlin was used for a few textures. A few were then tweaked slightly with Aseprite, though LibreSprite can most likely be used as well.
+The app [McPerlin](https://mcperlin.streamlit.app/) was used for a few textures. A few were then tweaked slightly with Aseprite, though [LibreSprite](https://github.com/LibreSprite/LibreSprite) can also be used.
 
 ## Progress
 - achievement
