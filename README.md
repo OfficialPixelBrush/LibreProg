@@ -34,7 +34,7 @@ The app [McPerlin](https://mcperlin.streamlit.app/) was used for a few textures.
     - [ ] gui
     - [ ] icons
     - [ ] inventory
-    - [ ] items
+    - [ ] items.png (WIP)
     - [ ] logo
     - [ ] particles
     - [ ] slot
