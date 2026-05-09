@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark">
+        <title>LibreProg</title>
+
+        <style>
+            :root {
+                --background: #FAFAF7;
+                --foreground: #2A2A2A;
+                --nav-background: #FAFAF7;
+                --hero-overlay: rgba(255, 255, 255, 0.1);
+                --shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+                --link: #2563EB;
+            }
+
+            @media (prefers-color-scheme: dark) {
+                :root {
+                    --background: #2C2C2C;
+                    --foreground: #F2F2F2;
+                    --nav-background: #1A1A1A;
+                    --hero-overlay: rgba(0, 0, 0, 0.0);
+                    --shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+                    --link: #6EA8FF;
+                }
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                margin: 0;
+                font-family: system-ui, sans-serif;
+                background: var(--background);
+                color: var(--foreground);
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 0.75rem 2rem;
+                padding: 0.9rem 1.5rem;
+                background: var(--nav-background);
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            }
+
+            nav .brand {
+                font-weight: 700;
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem 1.25rem;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav .nav-right {
+                margin-left: auto;
+            }
+
+            nav a {
+                color: var(--foreground);
+                text-decoration: none;
+                font-size: 0.95rem;
+            }
+
+            nav a:hover {
+                text-decoration: underline;
+            }
+
+            .hero {
+                position: relative;
+                min-height: calc(40vh - 8rem);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 4rem 1.5rem;
+                overflow: hidden;
+                color: #ffffff;
+            }
+
+            @media (max-width: 600px) {
+                .hero {
+                    min-height: 0;
+                    padding: 2.5rem 1.25rem;
+                }
+            }
+
+            .hero::before,
+            .hero::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+            }
+
+            .hero::before {
+                inset: -20px;
+                background: url("background.webp") center / cover no-repeat;
+                filter: blur(6px) saturate(1.25);
+                z-index: -2;
+            }
+
+            .hero::after {
+                background: var(--hero-overlay);
+                z-index: -1;
+            }
+
+            .hero h1, .hero h3 {
+                margin: 0;
+                text-shadow: var(--shadow);
+            }
+
+            .hero h1 {
+                margin-bottom: 0.75rem;
+                font-size: clamp(2.5rem, 6vw, 4.5rem);
+            }
+
+            .hero h3 {
+                font-weight: 400;
+                font-size: clamp(1rem, 2vw, 1.4rem);
+            }
+
+            .description {
+                max-width: 720px;
+                margin: 0 auto;
+                padding: 2rem 1.5rem;
+                line-height: 1.6;
+            }
+
+            .description h2 {
+                margin: 1.25rem 0 0.25rem;
+            }
+
+            .description p {
+                margin: 0.25rem 0;
+            }
+
+            .description a {
+                color: var(--link);
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <span class="brand">LibreProg</span>
+
+            <ul>
+                <li><a href="#contributing">Contributing</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+
+            <ul class="nav-right">
+                <li><a href="https://github.com/OfficialPixelBrush/LibreProg">GitHub</a></li>
+                <li><a href="https://discord.gg/JHTz2HSKrf">Discord</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <h1>LibreProg</h1>
+            <h3>Free and open-source assets for Minecraft Beta 1.7.3</h3>
+        </section>
+
+        <section class="description">
+            <p>The purpose of LibreProg is to provide a full set of free and open source assets for anyone to use in their old-school Minecraft projects. We primarily target Beta 1.7.3.</p>
+
+            <h2>How free are the assets?</h2>
+            <p>The textures were created while loosely referencing the original textures, mainly for layout purposes. All colors were eyeballed or done from memory.</p>
+
+            <h2>How are assets made?</h2>
+            <p>The app <a href="https://mcperlin.streamlit.app/">McPerlin</a> was used for a few textures. A few were then tweaked slightly with Aseprite, though <a href="https://github.com/LibreSprite/LibreSprite">LibreSprite</a> can also be used.</p>
+
+            <h2 id="contributing">How can I contribute?</h2>
+            <p>In any way you want! Though for ease to access we recommend sticking to the tools that're already in use.</p>
+            <ul>
+                <li><a href="https://github.com/LibreSprite/LibreSprite">LibreSprite</a>/<a href="https://www.aseprite.org/">Aseprite</a> for pixel-art edits</li>
+                <li><a href="https://krita.org/">Krita</a> for more general artwork (or for those that just prefer it)</li>
+                <li><a href="https://mcperlin.streamlit.app/">McPerlin</a>, <a href="https://gen3vra.github.io/perlinnoisegenerator/">Seamless Perlin Noise</a> or any other program/website that can generate noise</li>
+            </ul>
+
+            <h2 id="resources">Resources</h2>
+            <ul>
+                <li><a href="https://youtu.be/P6BvcLnESIM">The Secrets of Minecraft's Old Textures by _jspecter</a></li>
+            </ul>
+        </section>
+    </body>
+</html>
