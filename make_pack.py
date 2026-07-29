@@ -119,7 +119,7 @@ terrainMap = {
     "sticky_piston_front": [10,6],
     "piston_front": [11,6],
     "piston_side": [12,6],
-    "piston_buttom": [13,6],
+    "piston_bottom": [13,6],
     "piston_front_inside": [14,6],
     "rail_turn": [0,7],
     "black_wool": [1,7],
