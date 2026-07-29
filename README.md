@@ -74,8 +74,8 @@ In any way you want! Though for ease to access we recommend sticking to the tool
 - mob
     - [ ] char
     - [ ] chicken
-    - [ ] cow
-    - [ ] creeper
+    - [x] cow
+    - [x] creeper
     - [ ] ghast
     - [ ] ghast_fire
     - [x] pig
