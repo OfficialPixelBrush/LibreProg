@@ -58,8 +58,8 @@ This is another project that's part of/worked on by the OpenBeta Community. We h
   - [ ] container
   - [ ] crafting
   - [ ] furnace
-  - [ ] gui
-  - [ ] icons
+  - [x] gui
+  - [x] icons
   - [ ] inventory
   - [ ] items.png (WIP)
   - [ ] logo
