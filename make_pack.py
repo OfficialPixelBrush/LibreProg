@@ -11,6 +11,7 @@ ITEMS_FOLDER = "gui/items"
 TERRAIN_FOLDER = "terrain"
 GUI_FOLDER = "gui"
 MOB_FOLDER = "mob"
+FONT_FOLDER = "font"
 TEMP_FOLDER = "temp"
 
 ATLAS_SIZE = 256
@@ -357,6 +358,11 @@ guiFiles = [
     "unknown_pack",
 ]
 
+# ./font/
+fontFiles = [
+    "default",
+]
+
 def get_texture_path(texture_name, folder):
     return os.path.join(BASE_FOLDER, folder, f"{texture_name}.png")
 
@@ -416,6 +422,7 @@ generate_atlas(itemMap, ITEMS_FOLDER)
 # Copy raw files
 copy_files(guiFiles, GUI_FOLDER)
 copy_files(mobFiles, MOB_FOLDER)
+copy_files(fontFiles, FONT_FOLDER)
 copy_files(rootFiles, ".")
 
 # Copy .txt files from all subdirectories
