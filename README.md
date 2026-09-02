@@ -18,6 +18,23 @@ The textures were created while loosely referencing the original textures, mainl
 
 The app [McPerlin](https://mcperlin.streamlit.app/) was used for a few textures. A few were then tweaked slightly with Aseprite, though [LibreSprite](https://github.com/LibreSprite/LibreSprite) can also be used.
 
+## What about the font?
+
+`font/default.png` is not drawn by hand. `make_pack.py` builds it from
+[unscii](http://viznut.fi/unscii/), a bitmap font drawn at 8x8, which is exactly
+the size of the sheet's cells, so the glyphs go in as they were designed with no
+resizing. The `unscii-8-thin` cut is used by default because its one-pixel
+strokes are closest to the original font; switch `UNSCII_VARIANT` to `unscii-8`
+for the bolder one. The sheet is laid out as code page 437, the way Blocky game is.
+
+unscii is in the public domain. Four cells it has no glyph for are filled from
+[GNU Unifont](https://unifoundry.com/unifont/), which is dual licensed OFL-1.1
+and GPLv2+ with the Font Embedding Exception, so the generated sheet ships with
+a `font/README.txt` noting that those terms cover that one file rather than this
+repository's BSD 3-Clause. Dropping a hand-drawn `textures/font/default.png`
+into the repo makes `make_pack.py` use that instead, and the whole pack goes
+back to being BSD.
+
 ## How can I contribute?
 
 In any way you want! Though for ease to access we recommend sticking to the tools that're already in use.
@@ -52,7 +69,7 @@ This is another project that's part of/worked on by the OpenBeta Community. We h
   - [ ] clouds
   - [ ] rain
   - [ ] snow
-- [ ] font, default
+- [x] font, default (generated from unscii, not hand-drawn)
 - gui
   - [x] background
   - [ ] container
